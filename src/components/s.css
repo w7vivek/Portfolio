@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* ========== THEME ========== */
+body.dark-mode {
+  background: #0f0f0f;
+  color: #eaeaea;
+}
+
+body.light-mode {
+  background: #f5f6fa;
+  color: #111;
+}
+
+/* ========== MAIN LAYOUT ========== */
+.main {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* Top grid (Profile / About / Follow) */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+/* ========== COMMON CARD STYLE ========== */
+.contobjec,
+.about,
+.follow,
+.interest,
+.done,
+.projects,
+.training,
+.certificates,
+.training-card,
+.certificate-card,
+.exp-card {
+  background: #1b1b1b;
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contobjec:hover,
+.about:hover,
+.follow:hover,
+.done:hover,
+.projects:hover,
+.training-card:hover,
+.certificate-card:hover,
+.exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 209, 255, 0.25);
+}
+
+/* Light mode cards */
+body.light-mode
+  .contobjec,
+body.light-mode
+  .about,
+body.light-mode
+  .follow,
+body.light-mode
+  .interest,
+body.light-mode
+  .done,
+body.light-mode
+  .projects,
+body.light-mode
+  .training,
+body.light-mode
+  .certificates,
+body.light-mode
+  .training-card,
+body.light-mode
+  .certificate-card,
+body.light-mode
+  .exp-card {
+  background: #ffffff;
+  color: #111;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== PROFILE SECTION ========== */
+.contobjec {
+  text-align: center;
+  position: relative;
+}
+
+.theme-btn {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  background: #00d1ff;
+  color: #000;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 209, 255, 0.15);
+  color: #00ff9c;
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #00ff9c;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #00ff9c;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 14px 0;
+  border: 3px solid #00d1ff;
+}
+
+/* ========== HEADINGS ========== */
+.int {
+  color: #00d1ff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* ========== ABOUT ========== */
+.about p {
+  margin-bottom: 14px;
+}
+
+.about_in {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.about_in div {
+  background: #111;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+body.light-mode .about_in div {
+  background: #f0f0f0;
+}
+
+/* ========== SOCIAL LINKS ========== */
+.follow a {
+  display: block;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.25s ease;
+}
+
+.follow a:hover {
+  background: #00d1ff;
+  color: #000;
+}
+
+/* ========== INTERESTS ========== */
+.interest {
+  margin-bottom: 30px;
+}
+
+.interestclass {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.interestclass li {
+  background: #111;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+body.light-mode .interestclass li {
+  background: #f0f0f0;
+}
+
+/* ========== SKILLS ========== */
+.tech,
+.prog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+button {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: none;
+  background: #111;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #00d1ff;
+  color: #000;
+}
+
+/* ========== PROJECTS ========== */
+.projects {
+  margin-bottom: 30px;
+}
+
+.project-card {
+  background: #111;
+  padding: 16px;
+  border-radius: 14px;
+  margin-top: 14px;
+}
+
+.project-card h3 {
+  color: #00d1ff;
+  margin-bottom: 6px;
+}
+
+.project-card a {
+  color: #00d1ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ========== TRAINING / CERT / EXPERIENCE ========== */
+.training-card,
+.certificate-card,
+.exp-card {
+  margin-top: 16px;
+}
+
+.training-card a,
+.certificate-card a {
+  color: #00d1ff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* ========== FINAL YEAR PROJECT HIGHLIGHT ========== */
+.final-project {
+  position: relative;
+  border: 2px solid #00d1ff;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 209, 255, 0.12),
+    rgba(0, 0, 0, 0.4)
+  );
+  box-shadow: 0 0 25px rgba(0, 209, 255, 0.35);
+}
+
+body.light-mode .final-project {
+  background: linear-gradient(
+    #ffffff
+  );
+  box-shadow: 0 8px 22px rgba(0, 209, 255, 0.25);
+}
+
+/* Badge */
+.final-badge {
+  position: absolute;
+  top: -12px;
+  right: 16px;
+  background: #00d1ff;
+  color: #000;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  letter-spacing: 0.5px;
+}
+
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .theme-btn {
+    top: 12px;
+    right: 12px;
+  }
+}
